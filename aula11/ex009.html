@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+    
+</head>
+<body>
+    <h1>Velocidade</h1>
+    <label for="">Varificar Velocidade</label>
+    <input type="number" name="velo" id="vel">
+    <input type="submit" value="Verificar" onclick="verificar()">
+    <hr style="margin-top: 30px;">
+    <div id="resp"></div>
+
+    <script>
+        function verificar(){
+            var vel = window.document.getElementById('vel')
+            var resp = window.document.getElementById('resp')
+            var velNum = Number(vel.value)
+
+            if(velNum > 60){
+                resp.innerHTML = `<p><strong>Você foi multado!</strong></p>`
+
+                resp.innerHTML += `O limite de velocidade é de <strong>60Km/h</strong>`
+            }else{
+                resp.innerHTML = `<p>A sua velocidade atual é de <strong>${velNum}Km/h</strong></p>`
+
+                resp.innerHTML += `<p><strong>Tenha um bom dia!</strong></p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>

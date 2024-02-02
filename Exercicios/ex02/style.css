@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-color: rgb(69, 69, 238);
+    color: white;
+    font: normal 20pt arial;
+}
+
+h1, legend{
+    padding: 20px;
+    text-align: center;
+}
+
+legend{
+    font-size: 15pt;
+}
+
+label{
+    font-size: 18pt;
+    color: black;
+}
+
+
+/*Classes*/
+
+.container{
+    box-shadow: 6px 5px 20px rgba(0, 0, 0, 0.589);
+    border-radius: 20px 50px 20px 50px;
+    padding: 50px 20px 50px 20px;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+}
+
+.row{
+    display: block;
+    padding:10px 0px 10px 0px;
+}
+
+.botao{
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+

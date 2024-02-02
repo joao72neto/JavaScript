@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body{
+            font: normal 20px arial;
+            background-color: black;
+            color: white;
+        }
+        input{
+            font: normal 20px arial
+        }
+
+        .container{
+            text-align: center;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 90vh;
+            margin: auto;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            box-shadow: 6px 6px 10px rgba(255, 255, 255, 0.384);
+        }
+       
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <h1>Somando Valores</h1>
+        <div class="filho">
+            <input style="width: 100px;" type="numbe" name="n1" id="n1"> +
+            <input style="width: 100px;" type="number" name="'n2" id="n2">
+        </div>
+
+        <div><input type="submit" id="b" value="somar"></div>
+        <div id="res">
+            <p></p>
+        </div>
+
+        <script>
+            var b = window.document.getElementById('b')
+            b.addEventListener('click', soma)
+            function soma(){
+                var txtn1 = window.document.getElementById('n1')
+                var txtn2 = window.document.getElementById('n2')
+                var n1 = Number(txtn1.value)
+                var n2 = Number(txtn2.value)
+                var soma = n1 + n2
+                var res = window.document.getElementById('res')
+                res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${soma}</strong>`
+            }
+        </script>
+    </div>
+</body>
+</html>

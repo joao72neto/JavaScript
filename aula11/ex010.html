@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        div.head{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+        }
+
+        body{
+            background-color: lightgray;
+        }
+
+        
+        input{
+            display: block;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Nacionaldade</h1>
+        <label for="na">Qual a sua nacionalidade?</label><input type="text" name="na" id="na">
+        <input type="submit" value="confirmar" onclick="verificar()">
+    </div>
+    <hr>
+
+    <div id="resp"></div>
+
+    <script>
+
+       function verificar(){
+
+           var na = window.document.getElementById('na')
+           var resp = window.document.getElementById('resp')
+           na = na.value;
+           if(na != 'Brasil' && na != 'brasil'){
+               resp.innerHTML = `<p>Nacionalidade analisada: <strong>${na}</strong></p>`
+               resp.innerHTML += '<p><strong>Você é estrangeiro</strong></p>'
+           }else{
+               resp.innerHTML = `<p>Nacinalidade analisada: <strong>${na}</strong></p>`
+               resp.innerHTML = 'Você é <strong>não é estranegeiro</strong>'
+           }
+        }
+    </script>
+</body>
+</html>
