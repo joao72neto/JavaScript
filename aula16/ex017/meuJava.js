@@ -1,13 +1,22 @@
 function tabuada(){
     //Pegando elementos
     var num = document.getElementById('num')
-    var resp = document.getElementById('resp')
+    var tab = document.getElementById('seltab')
 
-    //Gerando a tabuada
+    //Verificando se num é diferente de 0
+    if(num.value.length == 0){
+        window.alert('Por favor, digite um número!')
+    }else{
+        let n = Number(num.value)
 
-    num = Number(num.value)
-    
-    for(c=1; c <= 10; c++){
-        resp.innerHTML += `${num} X ${c} = ${num * c} <br>`
+        //Criando a tabuada dinaminamente
+
+        tab.innerHTML = ' '
+
+        for(i=0; i < 10; i ++){
+            let item = document.createElement('option')
+            item.text = `${n} x ${i} = ${n*i}`
+            tab.appendChild(item)
+        }
     }
 }
