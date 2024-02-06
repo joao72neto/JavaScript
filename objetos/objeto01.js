@@ -8,4 +8,5 @@ envelhecer(i=0){
 }}
 
 amigo.envelhecer(10)
-console.log(`${amigo.nome} tem ${amigo.idade} anos de idade`)
+console.log(`${amigo.nome} tem ${amigo.idade} anos de idade`) 
+
